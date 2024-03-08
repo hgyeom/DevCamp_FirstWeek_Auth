@@ -8,13 +8,13 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_JSON_SERVER_URL; // JSON Serverì£¼ì
 const authOptions = {
   providers: [
     KakaoProvider({
-      clientId: process.env.KAKAO_CLIENT_ID ?? '',
-      clientSecret: process.env.KAKAO_CLIENT_SECRET ?? '',
+      clientId: process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_KAKAO_CLIENT_SECRET!,
     }),
-    GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID ?? '',
-      clientSecret: process.env.GITHUB_CLIENT_SECRET ?? '',
-    }),
+    // GithubProvider({
+    //   clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
+    //   clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET!,
+    // }),
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
