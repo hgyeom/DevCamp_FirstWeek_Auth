@@ -3,9 +3,9 @@ import KakaoProvider from 'next-auth/providers/kakao';
 import GithubProvider from 'next-auth/providers/github';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-const API_BASE_URL = process.env.JSON_SERVER_URL; // JSON Server주소
+const API_BASE_URL = process.env.NEXT_PUBLIC_JSON_SERVER_URL; // JSON Server주소
 
-const authOptions = {
+export const authOptions = {
   providers: [
     KakaoProvider({
       clientId: process.env.KAKAO_CLIENT_ID ?? '',
