@@ -11,10 +11,10 @@ const authOptions = {
       clientId: process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID!,
       clientSecret: process.env.NEXT_PUBLIC_KAKAO_CLIENT_SECRET!,
     }),
-    // GithubProvider({
-    //   clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
-    //   clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET!,
-    // }),
+    GithubProvider({
+      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET!,
+    }),
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
