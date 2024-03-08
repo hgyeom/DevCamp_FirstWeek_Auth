@@ -5,7 +5,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_JSON_SERVER_URL; // JSON Server주소
 
-export const authOptions = {
+const authOptions = {
   providers: [
     KakaoProvider({
       clientId: process.env.KAKAO_CLIENT_ID ?? '',
