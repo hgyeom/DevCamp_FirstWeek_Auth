@@ -23,19 +23,15 @@ export default function AuthButtons({ isLogin }: AuthProps) {
 
   return (
     <div className="flex justify-end gap-4">
-      {isLogin && (
-        <span>
-          {session
-            ? session.user?.name
-              ? session.user.name
-              : session.user?.email
-            : '로그인 중입니다.'}
-        </span>
-      )}
+      <span>
+        {session && session?.user?.name
+          ? session?.user.name
+          : session?.user?.email}
+      </span>
       <Button size={'sm'} variant={'default'} onClick={onClick}>
-        {isLogin ? '로그아웃' : '로그인'}
+        {isLogin || session ? '로그아웃' : '로그인'}
       </Button>
-      {!isLogin && (
+      {!isLogin && !session && (
         <Button size={'sm'} variant={'default'}>
           <Link href="/auth/signup">회원가입</Link>
         </Button>
