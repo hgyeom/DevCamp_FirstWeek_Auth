@@ -28,6 +28,7 @@ GLITCH : json-server
 
 VERCEL <https://dev-camp-first-week-auth-hgyeom.vercel.app/>
 
+### 로그인 하는데 시간이 걸립니다. 기다려 주세요.
 ----
 
 ## 간단한 파일 설명
